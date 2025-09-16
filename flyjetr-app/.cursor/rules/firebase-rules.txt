@@ -1,0 +1,31 @@
+# Firebase & Firestore Best Practices
+
+## Firestore Structure
+- Use subcollections for related data (trips/{tripId}/flights)
+- Keep documents under 1MB
+- Use composite indexes for complex queries
+- Batch writes when possible
+
+## Security Rules
+- Always validate data on the client AND server
+- Use Firebase Admin SDK for server-side operations
+- Implement proper authentication checks
+- Use custom claims for role-based access
+
+## Data Modeling
+- Denormalize for read performance when needed
+- Use references for complex relationships
+- Store computed values to avoid expensive queries
+- Use arrays sparingly (prefer subcollections)
+
+## Performance
+- Use pagination for large datasets
+- Implement proper caching strategies
+- Monitor query performance
+- Use offline persistence for better UX
+
+## Error Handling
+- Always handle Firestore errors gracefully
+- Implement retry logic for transient failures
+- Log errors with proper context
+- Provide meaningful user feedback

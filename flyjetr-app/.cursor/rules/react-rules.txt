@@ -1,0 +1,37 @@
+# React Component Standards
+
+## Component Structure
+- Use functional components with hooks
+- Keep components focused and single-purpose
+- Extract custom hooks for complex logic
+- Use TypeScript for better type safety
+
+## Form Handling
+- Use react-hook-form for all forms
+- Implement proper validation with yup
+- Handle loading and error states
+- Provide clear user feedback
+
+## State Management
+- Use useState for local component state
+- Use useContext for shared state
+- Consider useReducer for complex state logic
+- Avoid prop drilling
+
+## Styling
+- Use CSS modules or styled-components
+- Follow the design system (Plus Jakarta Sans, color palette)
+- Make components responsive
+- Use consistent spacing and typography
+
+## Performance
+- Use React.memo for expensive components
+- Implement proper dependency arrays
+- Avoid unnecessary re-renders
+- Use lazy loading for large components
+
+## Code Organization
+- One component per file
+- Co-locate related files
+- Use meaningful component names
+- Keep imports organized
