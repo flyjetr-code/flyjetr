@@ -7,14 +7,14 @@ import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
 // Your Firebase project configuration
-// Get this from Firebase Console > Project Settings > General > Your apps
+// Production configuration for flyjetr-app
 const firebaseConfig = {
-  apiKey: "your-api-key-here",
-  authDomain: "your-project-id.firebaseapp.com",
-  projectId: "your-project-id",
-  storageBucket: "your-project-id.appspot.com",
-  messagingSenderId: "your-sender-id",
-  appId: "your-app-id"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyBi-L5v8oMYNVBjWiEAQ70RHNBJ_c-ZDDU",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "flyjetr-app.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "flyjetr-app",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "flyjetr-app.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "784055919827",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:784055919827:web:f2fd8f359f60fe88da2026"
 };
 
 // Initialize Firebase

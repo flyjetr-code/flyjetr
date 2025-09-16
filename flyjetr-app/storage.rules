@@ -1,0 +1,15 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow read/write access to passenger documents
+    match /passenger-documents/{contactId}/{passengerId}/{fileName} {
+      allow read, write: if true;
+    }
+    
+    // Allow read/write access to all files for testing
+    // TODO: Implement proper security rules for production
+    match /{allPaths=**} {
+      allow read, write: if true;
+    }
+  }
+}
